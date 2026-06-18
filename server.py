@@ -21,7 +21,9 @@ class HelloWorldRequestHandler(SimpleHTTPRequestHandler):
     """Request handler that serves files from the project directory.
 
     The root path ("/") maps to index.html via SimpleHTTPRequestHandler's
-    default behaviour.
+    default behaviour, which renders the simple Hello World page (ADR-001).
+    No additional routing is required; the existing static-serving behaviour
+    fully satisfies the 'display hello world' requirement.
     """
 
     def log_message(self, fmt: str, *args) -> None:  # noqa: A003
